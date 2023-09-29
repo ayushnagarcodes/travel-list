@@ -19,8 +19,7 @@ body {
 }
 
 .app {
-    width: 100%;
-    height: 100vh;
+    min-height: 100svh;
     display: grid;
     grid-template-rows: auto auto 1fr auto;
 }
@@ -29,21 +28,22 @@ h1 {
     text-align: center;
     background-color: #f4a226;
     font-family: "Monoton";
-    font-size: 8rem;
+    font-size: 8vw;
     text-transform: uppercase;
     font-weight: 400;
-    word-spacing: 30px;
+    word-spacing: 3rem;
     letter-spacing: -5px;
-    padding: 2.4rem 0;
+    padding: 2.4rem 2rem;
 }
 
 .add-form {
     background-color: #e5771f;
-    padding: 2.8rem 0;
+    padding: 2.8rem 2rem;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 0.8rem;
+    gap: 2rem 0.8rem;
 }
 
 h3 {
@@ -85,7 +85,7 @@ input[type="text"] {
 .list {
     background-color: #5a3e2b;
     color: #ffebb3;
-    padding: 4rem 0;
+    padding: 4rem 2rem;
 
     display: flex;
     justify-content: space-between;
@@ -126,10 +126,6 @@ input[type="checkbox"] {
     accent-color: #e5771f;
 }
 
-/* input[type="checkbox"]:checked + span {
-    text-decoration: line-through;
-} */
-
 .list li button {
     cursor: pointer;
     background: none;
@@ -143,5 +139,11 @@ input[type="checkbox"] {
     background-color: #76c7ad;
     text-align: center;
     font-weight: 700;
-    padding: 3.2rem 0;
+    padding: 3.2rem 2rem;
+}
+
+@media screen and (max-width: 750px) {
+    html {
+        font-size: 55%;
+    }
 }
